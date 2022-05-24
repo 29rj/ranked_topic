@@ -49,6 +49,15 @@ const comparePassword  = (dbpass,loginpass) => {
   return dbpass == loginpass;
 }
 
+const rankTopic = (difficulty,time_taken) => {
+  let num1 = (difficulty == "easy") ? 1 : (difficulty == "medium") ? 3 : 5;
+  let num2 = time_taken;
+  if(num2 > 20)
+    num2 = 20;
+  
+  return num1*num2;
+}
+
 export {
   isValidEmail,
   validatePassword,
@@ -56,5 +65,6 @@ export {
   empty,
   generateUserToken,
   hashedPassword,
-  comparePassword
+  comparePassword,
+  rankTopic
 };

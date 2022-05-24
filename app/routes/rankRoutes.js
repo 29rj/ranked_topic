@@ -8,6 +8,6 @@ const router = express.Router();
 
 // rank Routes
 
-router.post('/topic', verifyAuth, updateRank);
+router.post('/update', verifyAuth, updateRank);
 
 export default router;
